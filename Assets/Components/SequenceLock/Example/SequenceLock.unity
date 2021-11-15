@@ -315,6 +315,7 @@ GameObject:
   - component: {fileID: 603886058}
   - component: {fileID: 603886057}
   - component: {fileID: 603886056}
+  - component: {fileID: 603886061}
   m_Layer: 0
   m_Name: Green Switch
   m_TagString: Untagged
@@ -334,7 +335,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bed58f44a4ed24ca2ae741318ffec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockObject: {fileID: 1325709111}
+  onClickEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 603886061}
+        m_TargetAssemblyTypeName: Pulse, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1325709111}
+        m_TargetAssemblyTypeName: Lock, Assembly-CSharp
+        m_MethodName: Input
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &603886057
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -411,6 +441,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &603886061
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 603886055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b952692d30f7844ab5e929b80e88827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 1.1
+  delay: 0.2
 --- !u!1 &705507993
 GameObject:
   m_ObjectHideFlags: 0
@@ -600,6 +644,7 @@ GameObject:
   - component: {fileID: 964791538}
   - component: {fileID: 964791537}
   - component: {fileID: 964791536}
+  - component: {fileID: 964791541}
   m_Layer: 0
   m_Name: Red Switch
   m_TagString: Untagged
@@ -619,7 +664,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bed58f44a4ed24ca2ae741318ffec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockObject: {fileID: 1325709111}
+  onClickEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 964791541}
+        m_TargetAssemblyTypeName: Pulse, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1325709111}
+        m_TargetAssemblyTypeName: Lock, Assembly-CSharp
+        m_MethodName: Input
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &964791537
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -696,6 +770,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &964791541
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 964791535}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b952692d30f7844ab5e929b80e88827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 1.1
+  delay: 0.2
 --- !u!1 &1325709110
 GameObject:
   m_ObjectHideFlags: 0
@@ -726,9 +814,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   switches:
-  - {fileID: 964791535}
-  - {fileID: 603886055}
-  - {fileID: 1365326137}
+  - {fileID: 964791536}
+  - {fileID: 964791536}
+  - {fileID: 1365326138}
   onUnlock:
     m_PersistentCalls:
       m_Calls:
@@ -771,6 +859,7 @@ GameObject:
   - component: {fileID: 1365326140}
   - component: {fileID: 1365326139}
   - component: {fileID: 1365326138}
+  - component: {fileID: 1365326143}
   m_Layer: 0
   m_Name: Blue Switch
   m_TagString: Untagged
@@ -790,7 +879,36 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4bed58f44a4ed24ca2ae741318ffec9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lockObject: {fileID: 1325709111}
+  onClickEffect:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1365326143}
+        m_TargetAssemblyTypeName: Pulse, Assembly-CSharp
+        m_MethodName: Trigger
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+  onPress:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1325709111}
+        m_TargetAssemblyTypeName: Lock, Assembly-CSharp
+        m_MethodName: Input
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!65 &1365326139
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -867,6 +985,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1365326143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1365326137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1b952692d30f7844ab5e929b80e88827, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  scale: 1.1
+  delay: 0.2
 --- !u!1 &1395884128
 GameObject:
   m_ObjectHideFlags: 0

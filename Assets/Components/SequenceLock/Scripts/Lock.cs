@@ -3,7 +3,7 @@ using UnityEngine.Events;
 
 public class Lock : MonoBehaviour
 {
-    public GameObject [] switches;
+    public Switch [] switches;
     public UnityEvent onUnlock;
     int position;
 
@@ -12,7 +12,7 @@ public class Lock : MonoBehaviour
         position = 0;
     }
 
-    public void Input(GameObject button)
+    public void Input(Switch button)
     {
         if (position < switches.Length)
         {
