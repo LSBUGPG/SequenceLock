@@ -5,6 +5,7 @@ public class Lock : MonoBehaviour
 {
     public Switch [] switches;
     public UnityEvent onUnlock;
+    public UnityEvent onFail;
     int position;
 
     void Start()
@@ -27,6 +28,7 @@ public class Lock : MonoBehaviour
             else
             {
                 position = 0;
+                onFail.Invoke();
             }
         }
     }
